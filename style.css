@@ -1,0 +1,124 @@
+* {
+    font-family: Roboto;
+    font-size: 20px;
+    box-sizing: border-box;
+    margin: 0;
+    text-align: justify;
+    line-height: 2rem;
+}
+
+button.Canc {
+    background-color:rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+    height: 2.5rem;
+    width: 5rem;
+    text-align: center;
+}
+
+button.OK {
+    background-color:rgb(1, 128, 1);
+    color: rgb(255, 255, 255);
+    height: 2.5rem;
+    width: 5rem;
+    text-align: center;
+}
+.caller-container{
+    padding: 0;
+    border: 0;
+}    
+#modal>div[class="ccc"] {
+    padding-right: 20px;
+}
+
+#modal>div[class="ccc"]>header>h1{
+    color: rgb(32, 30, 30);
+    font-size: larger;
+}
+
+#modal {
+    background-color:white;
+    color: rgb(82, 72, 72);
+    border:1px solid black;
+    padding: 0 0 20px 20px;
+    margin: auto;
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    transform: translate(-0%, -50%);
+    display: none;
+    opacity: 0;
+}
+
+:focus {
+    background-color: Aqua;
+}
+
+@media screen and (min-width: 560px) {
+    #modal {
+        width: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        }
+}
+
+#modal .button_cont {
+    text-align: right;
+    padding:10px;
+    height: 100%;
+}
+
+#modal .button_x {
+    text-align: right;
+}
+
+.fader{
+    position: fixed;
+    background-color: rgb(112, 93, 93);
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    border: 0;
+    margin:0;
+    padding:0;
+    display: none;
+    opacity: 0.7;
+    transition: opacity 3s;
+}
+
+.close {
+    vertical-align: middle;
+    border: none;
+    color: inherit;
+    border-radius: 50%;
+    background: transparent;
+    position: relative;
+    width: 32px;
+    height: 32px;
+    opacity: 0.6;
+}
+.close:focus,
+.close:hover {
+    opacity: 1;
+    background: rgba(128, 128, 128, 0.5);
+}
+.close:active {
+    background: rgba(128, 128, 128, 0.9);
+}
+/* tines of the X */
+.close::before,
+.close::after {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 20px;
+    width: 4px;
+    background-color: currentColor;
+}
+.close::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+.close::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
